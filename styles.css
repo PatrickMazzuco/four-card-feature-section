@@ -86,7 +86,7 @@ header p {
   border-top: 4px solid #fcaf4a;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 376px) {
   .container {
     max-width: 315px;
     margin: 80px auto;
