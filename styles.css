@@ -21,10 +21,10 @@ p {
 }
 
 .container {
-  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 50px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-flow: column wrap;
   align-items: center;
 }
 
@@ -38,20 +38,18 @@ p {
 
 header {
   text-align: center;
-  width: 500px;
+  max-width: 340px;
+  font-size: 13px;
 }
 header p {
   color: #a3a5ae;
+  font-size: 14px;
 }
 
-.cards {
-  display: flex;
-  align-items: center;
-}
 .cards .card {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  max-width: 350px;
   margin: 30px;
   border-radius: 3px;
   padding: 35px;
@@ -64,14 +62,11 @@ header p {
 .cards .card .card-content {
   color: #a3a5ae;
   line-height: 25px;
-  margin: 15px 0;
+  margin: 14px 0;
 }
 .cards .card img {
   margin-top: 15px;
   align-self: flex-end;
-}
-.cards .middle-cards .card {
-  margin: 30px 0;
 }
 .cards .cyan {
   border-top: 4px solid #45d3d3;
@@ -86,30 +81,52 @@ header p {
   border-top: 4px solid #fcaf4a;
 }
 
-@media (max-width: 376px) {
-  .container {
-    max-width: 315px;
-    margin: 80px auto;
-    margin-bottom: 20px;
+footer {
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  header {
+    text-align: center;
+    max-width: 340px;
+    margin-bottom: 50px;
   }
-  .container header {
-    width: 315px;
-    font-size: 14px;
-    margin-bottom: 60px;
-  }
-  .container header h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
+  header p {
+    color: #a3a5ae;
   }
 
   .cards {
-    flex-direction: column;
-    padding-bottom: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
   .cards .card {
-    width: 300px;
-    margin: 0;
-    margin-top: 15px;
+    margin: 10px;
+  }
+  .cards .middle-cards {
+    display: flex;
+    order: -1;
+  }
+}
+@media (min-width: 1110px) {
+  .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards .card {
+    margin: 10px;
+  }
+  .cards .middle-cards {
+    display: flex;
+    flex-direction: column;
+    order: 0;
+  }
+}
+@media (min-width: 1230px) {
+  .cards .card {
+    margin: 30px;
   }
 }
 
